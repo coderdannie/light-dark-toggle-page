@@ -1,0 +1,66 @@
+@use '../utils/' as *;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--font-inter);
+  background-color: var(--dark-bg);
+  color: var(--dark-text2);
+}
+.container {
+  max-width: rem(1110);
+  padding-inline: rem(25);
+  margin-inline: auto;
+  margin-bottom: rem(46);
+  @include breakpoint-up(large) {
+    padding-inline: 0;
+  }
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.hide-for-mobile {
+  //hide for tablet and mobile devices
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+.hide-for-tablet-and-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+.show-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+.cards {
+  display: grid;
+  --min-column-size: 225px;
+  gap: clamp(1rem, 5vmax, 1.625rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--min-column-size)), 1fr)
+  );
+}

@@ -1,0 +1,54 @@
+@use '../utils/' as *;
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rem(36);
+
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: rem(243);
+    background-color: var(--dark-top-bg);
+    border-bottom-left-radius: rem(20);
+    border-bottom-right-radius: rem(20);
+    overflow: hidden;
+    z-index: -1;
+  }
+  @include breakpoint-up(medium) {
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    color: var(--dark-text2);
+    font-size: rem(24);
+    font-weight: 700;
+    @include breakpoint-up(medium) {
+      font-size: rem(28);
+    }
+  }
+  &__title {
+    width: 100%;
+
+    @include breakpoint-up(medium) {
+      width: auto;
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--dark-text1);
+  }
+  &__divider {
+    width: 100%;
+    height: rem(2);
+    background-color: var(--dark-text1);
+    opacity: 0.3;
+    margin-top: rem(25);
+    margin-bottom: rem(16);
+  }
+}

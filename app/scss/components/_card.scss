@@ -1,0 +1,124 @@
+@use '../utils/' as *;
+.card {
+  position: relative;
+  background-color: var(--dark-card);
+  padding: rem(25);
+  color: var(--dark-text1);
+  text-align: center;
+  border-radius: rem(5);
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--dark-card-hover);
+  }
+  &--facebook {
+    border-top: rem(5) solid var(--facebook);
+  }
+  &--twitter {
+    border-top: rem(5) solid var(--twitter);
+  }
+  &--instagram::before {
+    position: absolute;
+    background: linear-gradient(
+      225deg,
+      var(--instagram-end),
+      var(--instagram-middle) 50.91%,
+      var(--instagram-start) 100%
+    );
+    content: '';
+    width: 100%;
+    height: rem(5);
+    top: 0;
+    left: 0;
+  }
+  &--youtube {
+    border-top: rem(5) solid var(--youtube);
+  }
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(20);
+    margin-top: rem(5);
+    margin-bottom: rem(28);
+  }
+
+  &__icon {
+    margin-right: rem(8);
+    // &--facebook {
+    // }
+  }
+  &__username {
+    font-size: rem(12);
+    font-weight: 700;
+  }
+  &__followers {
+    margin-bottom: rem(25);
+  }
+  &__count {
+    color: var(--dark-text2);
+    font-size: rem(24);
+    font-weight: 700;
+    margin-bottom: rem(4);
+    line-height: 1;
+    @include breakpoint-up(medium) {
+      font-size: rem(56);
+    }
+    &--small {
+      margin-bottom: 0;
+      @include breakpoint-up(medium) {
+        font-size: rem(28);
+      }
+    }
+  }
+  //
+  &__label {
+    font-size: rem(12);
+    font-weight: 400;
+    color: var(--dark-text1);
+    text-transform: uppercase;
+    padding-top: rem(5);
+    @include breakpoint-up(medium) {
+      letter-spacing: rem(5);
+    }
+  }
+  &__change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+
+    img {
+      margin-right: rem(4);
+    }
+    &--up {
+      color: var(--lime-green);
+    }
+    &--down {
+      color: var(--bright-red);
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: rem(24);
+    img {
+      justify-self: end;
+    }
+  }
+  &__number {
+    font-size: rem(12);
+    font-weight: 700;
+  }
+  &__subtitle {
+    color: var(--dark-text1);
+    font-size: rem(14);
+    font-weight: 700;
+    text-align: left;
+    justify-self: left;
+  }
+  &__count {
+    justify-self: left;
+  }
+}

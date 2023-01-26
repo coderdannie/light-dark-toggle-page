@@ -1,0 +1,20 @@
+.light {
+  --dark-bg: hsl(0, 0%, 100%);
+  --dark-top-bg: hsl(225, 100%, 98%);
+  --dark-card: hsl(227, 47%, 96%);
+  --dark-text1: hsl(228, 12%, 44%);
+  --dark-text2: hsl(230, 17%, 14%);
+  --toggle-bg-end: hsl(228, 34%, 66%);
+  --toggle-bg-start: hsl(228, 34%, 66%);
+  --dark-card-hover: hsl(225, 35%, 91%);
+}
+:root:has(#light:checked) {
+  --dark-bg: hsl(0, 0%, 100%);
+  --dark-top-bg: hsl(225, 100%, 98%);
+  --dark-card: hsl(227, 47%, 96%);
+  --dark-text1: hsl(228, 12%, 44%);
+  --dark-text2: hsl(230, 17%, 14%);
+  --toggle-bg-end: hsl(228, 34%, 66%);
+  --toggle-bg-start: hsl(228, 34%, 66%);
+  --dark-card-hover: hsl(225, 35%, 91%);
+}
