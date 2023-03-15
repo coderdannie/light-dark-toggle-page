@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://www.frontendmentor.io/solutions/socialmediadashboard-with-theme-switcher-j42UU7nN_h)
-- Live Site URL: [](https://coderdannie-darklight-toggle-page.netlify.app/)
+- Solution URL: [Solution url](https://www.frontendmentor.io/solutions/socialmediadashboard-with-theme-switcher-j42UU7nN_h)
+- Live Site URL: [Live Site Url](https://coderdannie-darklight-toggle-page.netlify.app/)
 
 ## My process
 
@@ -89,7 +89,7 @@ I will focus more on how to use css grid for complex layouts and also how to wri
 
 ## Author
 
-- Website - [](https://www.frontendmentor.io)
+- Website - [frontendmentor](https://www.frontendmentor.io)
 - Frontend Mentor - [@coderdannie](https://www.frontendmentor.io/profile/coderdannie)
 - Twitter - [@coderdannie](https://www.twitter.com/coderdannie)
 
